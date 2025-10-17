@@ -300,10 +300,63 @@ def update_incident(incident_id, status):
 
 # Reportes (CU-022 a CU-023)
 import csv
-def generate_report(output_path='report.csv'):
+from datetime import datetime, timedelta
+from typing import List
+
+def _parse_timestamp(ts_str):
+    return datetime.strptime(ts_str, '%Y-%m-%d %H:%M:%S')
+
+
+def _are_incidents_similar(inc1, inc2, time_window_minutes=60):
+    """同様のインシデントかどうかを判断（同一カメラ・同一タイプ・同一ユーザーかつ時間差が閾値以内）"""
+    # DB schema: 0=id,1=camera_name,2=type,3=timestamp,4=description,5=status,6=evidence_path,7=user_identified
+    cam1, cam2 = inc1[1], inc2[1]
+    type1, type2 = inc1[2], inc2[2]
+    user1, user2 = inc1[7], inc2[7]
+
+    if cam1 != cam2 or type1 != type2 or (user1 or 'unknown') != (user2 or 'unknown'):
+        return False
+
+    time1 = _parse_timestamp(inc1[3])
+    time2 = _parse_timestamp(inc2[3])
+    return abs((time1 - time2).total_seconds()) <= (time_window_minutes * 60)
+
+
+def generate_report(output_path='reporte_analizado.csv', time_window_minutes=60):
+    """
+    Genera un "reporte analizado" que agrupa detecciones repetidas del mismo
+    incumplimiento (misma cámara, mismo tipo, mismo usuario) dentro de una ventana
+    de tiempo (por defecto 60 minutos) en una sola entrada.
+    Salida: CSV con columnas formales y legibles.
+    """
     incidents = list_incidents()
+    # ordenar cronológicamente ascendente para agrupar por ocurrencia temprana
+    incidents_sorted = sorted(incidents, key=lambda r: _parse_timestamp(r[3]))
+
+    grouped: List[tuple] = []
+    for inc in incidents_sorted:
+        if not grouped:
+            grouped.append(inc)
+            continue
+
+        last = grouped[-1]
+        if _are_incidents_similar(last, inc, time_window_minutes=time_window_minutes):
+            # Si es similar a la última agrupada, ignoramos la nueva (no acumulamos contador)
+            # Conservamos la primera aparición (last)
+            continue
+        else:
+            grouped.append(inc)
+
+    # Escribir CSV formal: seleccionar columnas (ID, Cámara, Tipo, Timestamp, Descripción, Status, Usuario Identificado)
+    rows = []
+    for inc in grouped:
+        row = [inc[0], inc[1], inc[2], inc[3], inc[4], inc[5], inc[7]]
+        rows.append(row)
+
     with open(output_path, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(['ID', 'Cámara', 'Tipo', 'Timestamp', 'Descripción', 'Status', 'Usuario Identificado'])
-        writer.writerows(incidents)
+        writer.writerows(rows)
+
+    print(f"Reporte analizado completado: {len(incidents)} registros originales -> {len(rows)} registros reportados en '{output_path}'")
     return output_path
