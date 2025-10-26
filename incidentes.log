@@ -1,144 +1,380 @@
-2025-09-24 07:14:32,190 - INFO - Modelo cargado: d:\SAFEBUILD20250924\runs\detect\train9\weights\best.pt
-2025-09-24 07:14:33,232 - INFO - Cámara inicializada en índice 0 con backend None
-2025-09-24 07:14:33,252 - INFO - Modelo cargado: d:\SAFEBUILD20250924\runs\detect\train9\weights\best.pt
-2025-09-24 07:14:33,287 - WARNING - No hay más cámaras disponibles. Usando índice por defecto.
-2025-09-24 07:14:33,291 - ERROR - No se pudo inicializar cámara externa en índice 1
-2025-09-24 07:22:19,439 - INFO - Modelo cargado: d:\SAFEBUILD20250924\runs\detect\train9\weights\best.pt
-2025-09-24 07:22:20,411 - INFO - Cámara inicializada en índice 0 con backend None
-2025-09-24 07:22:20,434 - INFO - Modelo cargado: d:\SAFEBUILD20250924\runs\detect\train9\weights\best.pt
-2025-09-24 07:22:20,469 - WARNING - No hay más cámaras disponibles. Usando índice por defecto.
-2025-09-24 07:22:20,473 - ERROR - No se pudo inicializar cámara externa en índice 1
-2025-09-24 07:34:27,767 - INFO - Modelo cargado: d:\SAFEBUILD20250924\runs\detect\train9\weights\best.pt
-2025-09-24 07:34:28,728 - INFO - Cámara inicializada en índice 0 con backend None
-2025-09-24 07:34:28,747 - INFO - Modelo cargado: d:\SAFEBUILD20250924\runs\detect\train9\weights\best.pt
-2025-09-24 07:34:28,784 - INFO - No se encontraron cámaras externas, buscando cámara interna...
-2025-09-24 07:34:29,112 - INFO - Cámara interna detectada en índice 0 con backend None
-2025-09-24 07:34:29,399 - INFO - Asignando índice 0 secuencialmente a widget Cam 2 - Área de Almacenamiento
-2025-09-24 07:34:30,012 - INFO - Cámara inicializada en índice 0 con backend None
-2025-09-24 07:34:30,030 - INFO - Modelo cargado: d:\SAFEBUILD20250924\runs\detect\train9\weights\best.pt
-2025-09-24 07:34:30,030 - INFO - Asignando índice 0 secuencialmente a widget Cam 3 - Área de mezcla de concreto
-2025-09-24 07:34:30,468 - INFO - Cámara inicializada en índice 0 con backend None
-2025-09-24 07:34:30,492 - INFO - Modelo cargado: d:\SAFEBUILD20250924\runs\detect\train9\weights\best.pt
-2025-09-24 07:34:30,492 - INFO - Asignando índice 0 secuencialmente a widget Cam 4 - Área de armado de acero
-2025-09-24 07:34:30,934 - INFO - Cámara inicializada en índice 0 con backend None
-2025-09-24 07:45:03,605 - INFO - No se encontraron cámaras externas, buscando cámara interna...
-2025-09-24 07:45:04,178 - INFO - Cámara interna detectada en índice 0 con backend None
-2025-09-24 07:45:04,501 - INFO - Modelo cargado: d:\SAFEBUILD20250924\runs\detect\train9\weights\best.pt
-2025-09-24 07:45:05,104 - INFO - Cámara inicializada en índice 0 con backend None
-2025-09-24 07:45:05,124 - INFO - Modelo cargado: d:\SAFEBUILD20250924\runs\detect\train9\weights\best.pt
-2025-09-24 07:45:05,125 - INFO - Asignando índice 0 secuencialmente a widget Cam 2 - Área de Almacenamiento
-2025-09-24 07:45:05,574 - INFO - Cámara inicializada en índice 0 con backend None
-2025-09-24 07:45:05,595 - INFO - Modelo cargado: d:\SAFEBUILD20250924\runs\detect\train9\weights\best.pt
-2025-09-24 07:45:05,595 - INFO - Asignando índice 0 secuencialmente a widget Cam 3 - Área de mezcla de concreto
-2025-09-24 07:45:06,043 - INFO - Cámara inicializada en índice 0 con backend None
-2025-09-24 07:45:06,065 - INFO - Modelo cargado: d:\SAFEBUILD20250924\runs\detect\train9\weights\best.pt
-2025-09-24 07:45:06,066 - INFO - Asignando índice 0 secuencialmente a widget Cam 4 - Área de armado de acero
-2025-09-24 07:45:06,511 - INFO - Cámara inicializada en índice 0 con backend None
-2025-09-24 07:51:33,991 - INFO - Cámara detectada en índice 0
-2025-09-24 07:51:34,578 - INFO - Modelo cargado para Cam 1 - Área de Acceso y Control: d:\SAFEBUILD20250924\runs\detect\train9\weights\best.pt
-2025-09-24 07:51:35,264 - INFO - Cámara Cam 1 - Área de Acceso y Control inicializada en índice 0
-2025-09-24 08:24:49,128 - INFO - Cámara detectada en índice 0
-2025-09-24 08:24:49,748 - INFO - Modelo cargado para Cam 1 - Área de Acceso y Control: d:\SAFEBUILD20250924\runs\detect\train9\weights\best.pt
-2025-09-24 08:24:50,429 - INFO - Cámara Cam 1 - Área de Acceso y Control inicializada en índice 0
-2025-10-04 18:35:31,118 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-04 18:35:31,373 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-04 18:35:31,433 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-04 18:35:31,490 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:25:11,518 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:25:11,666 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:25:11,725 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:25:11,778 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:26:30,263 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:26:30,325 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:26:30,385 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:26:30,443 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:26:44,205 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:26:44,258 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:26:44,310 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:26:44,362 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:27:28,058 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:27:28,126 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:27:28,189 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:27:28,245 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:39:04,197 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:39:04,264 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:39:04,329 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:39:04,415 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train9\weights\best.pt
-2025-10-15 22:41:24,379 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-15 22:41:24,489 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-15 22:41:24,587 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-15 22:41:24,700 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-15 22:42:19,088 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-15 22:42:19,163 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-15 22:42:19,229 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-15 22:42:19,301 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-15 23:52:55,709 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-15 23:52:55,876 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-15 23:52:55,950 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-15 23:52:56,019 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-15 23:56:07,121 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-15 23:56:07,185 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-15 23:56:07,253 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-15 23:56:07,321 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:02:30,117 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:02:30,170 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:02:30,223 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:02:30,276 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:08:12,144 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:08:12,208 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:08:12,301 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:08:12,414 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:19:02,302 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:19:02,369 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:19:02,435 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:19:02,504 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:20:59,079 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:20:59,143 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:20:59,210 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:20:59,287 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:25:54,290 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:25:54,359 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:25:54,428 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 00:25:54,494 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251001\runs\detect\train8\weights\best.pt
-2025-10-16 19:09:40,905 - INFO - C\xe1mara detectada en \xedndice 0
-2025-10-16 19:09:43,062 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:09:47,853 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
-2025-10-16 19:09:47,945 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:09:48,006 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:09:48,046 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:16:29,289 - INFO - C\xe1mara detectada en \xedndice 0
-2025-10-16 19:16:30,361 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:16:35,369 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
-2025-10-16 19:16:35,431 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:16:35,480 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:16:35,530 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:17:35,661 - INFO - C\xe1mara detectada en \xedndice 0
-2025-10-16 19:17:36,760 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:17:41,688 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
-2025-10-16 19:17:41,746 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:17:41,799 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:17:41,847 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:19:21,765 - INFO - C\xe1mara detectada en \xedndice 0
-2025-10-16 19:19:22,897 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:19:27,788 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
-2025-10-16 19:19:27,829 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:19:27,881 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:19:27,931 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:49:11,719 - INFO - C\xe1mara detectada en \xedndice 0
-2025-10-16 19:49:12,830 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:49:18,568 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
-2025-10-16 19:49:18,656 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:49:18,726 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 19:49:18,805 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 20:06:10,193 - INFO - C\xe1mara detectada en \xedndice 0
-2025-10-16 20:06:11,370 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 20:06:17,080 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
-2025-10-16 20:06:17,158 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 20:06:17,220 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 20:06:17,290 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 20:07:32,974 - INFO - C\xe1mara detectada en \xedndice 0
-2025-10-16 20:07:34,108 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 20:07:39,922 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
-2025-10-16 20:07:39,989 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 20:07:40,058 - INFO - Modelo cargado para C\xe1mara 3: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
-2025-10-16 20:07:40,124 - INFO - Modelo cargado para C\xe1mara 4: c:\Users\kenka\Downloads\SAFEBUILD20251016\runs\detect\train8\weights\best.pt
+2025-10-24 16:34:29,662 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:34:31,082 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:34:36,178 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-24 16:34:36,237 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:34:38,193 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:39:55,807 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:39:56,993 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:40:04,129 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-24 16:40:04,236 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:40:08,823 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:41:49,149 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:41:51,050 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:41:58,362 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-24 16:41:58,451 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:42:01,197 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:42:50,132 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:42:52,087 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:43:00,178 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-24 16:43:00,278 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:43:03,313 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:43:56,728 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:43:57,898 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:44:03,907 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-24 16:44:03,983 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:44:06,310 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:45:04,913 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:45:06,568 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:45:13,743 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-24 16:45:13,830 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:45:16,219 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:47:24,812 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:47:26,108 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:47:34,742 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-24 16:47:34,864 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:47:37,929 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:48:26,169 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:48:27,412 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:48:33,436 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-24 16:48:33,514 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:48:35,678 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:50:54,996 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-24 16:50:56,141 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:51:02,021 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-24 16:51:02,095 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-24 16:51:04,367 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:13:12,650 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:13:15,578 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:13:22,245 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 14:13:22,393 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:13:24,949 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:15:50,822 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:15:51,885 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:15:59,238 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 14:15:59,300 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:16:01,338 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:17:33,763 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:17:35,050 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:17:41,217 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 14:17:41,309 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:17:43,845 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:18:49,833 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:18:51,035 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:18:57,398 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 14:18:57,466 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:18:59,624 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:20:48,570 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:20:49,759 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:20:56,421 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 14:20:56,500 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:20:58,785 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:22:26,420 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:22:27,482 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:22:33,815 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 14:22:33,894 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:22:35,986 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:23:38,629 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:23:39,994 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:23:46,349 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 14:23:46,448 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:23:48,584 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:24:59,037 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:25:00,151 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:25:06,233 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 14:25:06,312 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:25:08,549 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:27:57,816 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:27:59,380 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:28:06,766 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 14:28:06,837 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:28:08,829 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:30:03,539 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:30:04,820 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:30:11,077 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 14:30:11,151 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:30:13,369 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:31:33,478 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:31:35,093 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:31:41,676 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 14:31:41,750 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:31:44,002 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:34:03,167 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:34:04,475 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:34:12,100 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 14:34:12,237 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:34:14,854 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:35:53,352 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:35:54,618 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:35:59,981 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 14:36:00,046 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:36:01,937 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:38:23,901 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 14:38:25,154 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:38:32,064 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 14:38:32,215 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 14:38:35,017 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 15:29:17,158 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 15:29:18,139 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 15:29:23,027 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 15:29:23,088 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 15:29:24,952 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 15:30:30,517 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 15:30:31,584 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 15:30:36,696 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 15:30:36,752 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 15:30:38,638 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 15:32:06,939 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 15:32:07,887 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 15:32:12,848 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 15:32:12,902 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 15:32:14,807 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 15:34:36,686 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 15:34:37,715 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 15:34:42,811 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 15:34:42,867 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 15:34:44,780 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 15:52:35,006 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 15:52:36,104 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 15:52:41,284 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 15:52:41,342 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 15:52:43,398 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 15:56:33,722 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 15:56:34,666 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 15:56:40,169 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 15:56:40,225 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 15:56:42,266 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 15:57:18,040 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 15:57:18,969 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 15:57:23,913 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 15:57:23,972 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 15:57:25,987 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 16:01:26,811 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 16:01:27,783 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 16:01:32,987 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 16:01:33,049 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 16:01:35,013 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 16:05:09,853 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 16:05:10,837 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 16:05:16,079 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 16:05:16,136 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251022\runs\detect\train9\weights\best.pt
+2025-10-25 16:05:18,075 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 16:19:11,796 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 16:19:13,273 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 16:19:21,914 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 16:19:22,033 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 16:19:25,066 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 16:25:28,227 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 16:25:29,711 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 16:25:37,438 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 16:25:37,707 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 16:25:41,157 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 17:00:25,453 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 17:00:26,434 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 17:00:32,381 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 17:00:32,509 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 17:00:35,732 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 17:10:01,328 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 17:10:02,355 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 17:10:07,681 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 17:10:07,744 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 17:10:09,766 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 17:18:49,267 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 17:18:50,258 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 17:18:55,287 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 17:18:55,348 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 17:18:57,395 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 17:28:04,235 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 17:28:05,631 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 17:28:12,541 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 17:28:12,614 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 17:28:15,583 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 17:48:30,619 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 17:48:31,845 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 17:48:38,419 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 17:48:38,501 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 17:48:40,790 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 17:50:48,479 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 17:50:49,698 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 17:50:55,999 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 17:50:56,098 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 17:50:58,502 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 18:00:28,164 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 18:00:29,731 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 18:00:37,785 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 18:00:37,888 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 18:00:40,474 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 18:07:50,427 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 18:07:51,564 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 18:07:56,703 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-25 18:07:56,778 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 18:07:59,051 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-25 23:36:21,891 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-25 23:36:22,048 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 00:09:30,547 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 00:09:30,597 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 00:21:49,774 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 00:21:49,838 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 00:40:07,813 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 00:40:07,865 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 00:45:30,670 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 00:45:30,707 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 00:47:32,309 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 00:47:32,363 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 00:49:05,205 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 00:49:05,259 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 00:56:07,992 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 00:56:08,060 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 01:06:06,721 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 01:06:06,782 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 01:12:06,950 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 01:12:07,000 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251025\runs\detect\train9\weights\best.pt
+2025-10-26 01:54:57,557 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 01:54:58,637 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 01:55:03,766 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 01:55:03,826 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 01:55:05,714 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 01:58:20,352 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 01:58:21,356 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 01:58:26,260 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 01:58:26,317 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 01:58:28,197 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:04:47,315 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:04:48,267 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:04:53,133 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 02:04:53,188 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:04:55,058 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:07:56,419 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:07:57,402 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:08:02,292 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 02:08:02,345 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:08:04,213 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:10:26,985 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:10:27,956 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:10:32,803 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 02:10:32,859 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:10:34,741 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:19:30,904 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:19:31,899 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:19:37,163 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 02:19:37,217 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:19:39,292 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:24:12,568 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:24:13,534 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:24:18,515 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 02:24:18,566 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:24:20,381 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:28:32,517 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:28:33,507 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:28:38,455 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 02:28:38,509 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:28:40,488 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:37:06,238 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:37:07,246 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:37:14,688 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 02:37:14,761 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:37:16,775 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:43:52,005 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:43:52,975 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:43:57,811 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 02:43:57,867 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:43:59,711 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:45:46,521 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:45:47,521 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:45:53,927 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 02:45:53,980 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:45:55,915 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:47:38,317 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:47:39,300 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:47:44,174 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 02:47:44,226 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:47:46,194 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:48:59,285 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:49:00,275 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:49:05,529 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 02:49:05,586 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:49:07,483 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:51:27,492 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:51:28,513 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:51:33,375 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 02:51:33,437 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:51:35,316 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:55:26,954 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:55:27,894 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:55:32,736 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 02:55:32,794 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:55:34,673 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:57:55,997 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 02:57:56,943 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:58:01,807 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 02:58:01,864 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 02:58:03,827 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 03:12:07,768 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 03:12:08,762 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 03:12:13,726 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 03:12:13,781 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 03:12:15,665 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 03:13:07,104 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 03:13:08,066 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 03:13:12,875 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 03:13:12,930 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 03:13:14,959 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 03:17:58,763 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 03:17:59,792 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 03:18:04,675 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 03:18:04,732 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 03:18:06,626 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 03:29:46,272 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 03:29:47,438 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 03:29:52,706 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 03:29:52,766 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 03:29:54,756 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 03:33:50,922 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 03:33:52,272 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 03:33:58,283 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 03:33:58,345 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 03:34:00,350 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 03:39:26,812 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 03:39:28,038 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 03:39:33,657 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 03:39:33,722 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 03:39:35,996 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 03:48:39,295 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 03:48:40,419 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 03:48:45,596 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 03:48:45,658 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 03:48:47,664 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 04:05:00,175 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 04:05:01,169 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 04:05:06,121 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 04:05:06,195 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 04:05:08,099 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 04:13:38,926 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 04:13:40,316 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 04:13:46,034 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 04:13:46,176 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 04:13:49,467 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 04:16:48,628 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 04:16:49,600 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 04:16:56,569 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 04:16:56,835 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 04:16:59,064 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 04:20:08,145 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 04:20:09,216 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 04:20:14,670 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 04:20:14,740 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 04:20:16,847 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 04:33:05,740 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 04:33:06,751 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 04:33:12,991 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 04:33:13,050 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 04:33:15,182 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 04:42:47,606 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 04:42:48,610 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 04:42:53,475 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 04:42:53,535 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 04:42:55,413 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 04:56:09,391 - INFO - C\xe1mara detectada en \xedndice 0
+2025-10-26 04:56:10,337 - INFO - Modelo cargado para C\xe1mara 1: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 04:56:15,155 - INFO - C\xe1mara C\xe1mara 1 inicializada en \xedndice 0
+2025-10-26 04:56:15,207 - INFO - Modelo cargado para C\xe1mara 2: c:\Users\kenka\Downloads\SAFEBUILD20251026\runs\detect\train9\weights\best.pt
+2025-10-26 04:56:17,048 - INFO - C\xe1mara detectada en \xedndice 0

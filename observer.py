@@ -6,6 +6,8 @@ from config import DEFAULT_CONF, ALERT_COOLDOWN
 from database import register_incident
 from datetime import datetime
 import time
+import threading
+from typing import Tuple
 
 
 class Subject(ABC):
@@ -32,6 +34,15 @@ class SafetyMonitorSubject(Subject):
         self._state = {}
         self._observers: List['Observer'] = []
         self._last_alert_time: float = 0
+        # track recent events to avoid duplicate notifications (key -> last_time)
+        self._recent_event_times: Dict[tuple, float] = {}
+        # pending events waiting for possible QR identification nearby
+        self._pending_events: Dict[tuple, dict] = {}
+        self._pending_lock = threading.Lock()
+        # seconds to wait before emitting an alert with unknown user to allow QR to appear
+        # Se incrementa a 4s para dar tiempo a que aparezca un QR y reducir 'unknown' frecuentes
+        self.PENDING_WINDOW = 4.0
+        self._last_known_qr: Dict[str, tuple] = {}
 
     def attach(self, observer: 'Observer') -> None:
         print(f"SafetyMonitorSubject: Attached observer {type(observer).__name__}.")
@@ -43,12 +54,57 @@ class SafetyMonitorSubject(Subject):
 
     def notify(self, event_data: dict) -> None:
         ahora = time.time()
-        if ahora - self._last_alert_time < ALERT_COOLDOWN:
-            print('Cooldown activo: omitiendo notificación')
-            return  # Cooldown
+        # NOTE: removed global ALERT_COOLDOWN blocking here to allow per-event
+        # deduplication logic below (_recent_event_times) to control repeats.
+        # Global cooldown caused legitimate alerts to be suppressed across
+        # different events and cameras. We keep _last_alert_time for logging
+        # purposes but do not block notifications globally.
         self._last_alert_time = ahora
 
-        print(f"SafetyMonitorSubject: Notifying observers with event: {event_data}")
+        # Si se trata de un evento INFO con identificación de usuario, actualizar last_known_qr
+        # y, si existen eventos pendientes para la misma cámara, flusharlos reemplazando 'unknown'.
+        if (not event_data.get('alert_type')) and event_data.get('user_identified') and event_data.get('user_identified') != 'unknown':
+            try:
+                cam = event_data.get('camera')
+                if cam:
+                    self._last_known_qr[cam] = (event_data.get('user_identified'), ahora)
+                # Flush pending events for this camera
+                with self._pending_lock:
+                    keys_to_flush = [k for k in list(self._pending_events.keys()) if k[0] == cam]
+                    for k in keys_to_flush:
+                        pending_ev = self._pending_events.pop(k, None)
+                        if not pending_ev:
+                            continue
+                        # Update pending event with identified user
+                        pending_ev['user_identified'] = event_data.get('user_identified')
+                        # improve description if it contained unknown
+                        try:
+                            pending_ev['description'] = pending_ev.get('description', '').replace('Usuario: unknown', f'Usuario identificado: {event_data.get("user_identified")}')
+                        except Exception:
+                            pass
+                        # Notify observers directly for these flushed events
+                        for observer in list(self._observers):
+                            try:
+                                observer.update(self, pending_ev)
+                            except Exception as e:
+                                print(f"Error notifying observer during pending flush {type(observer).__name__}: {e}")
+            except Exception:
+                pass
+
+        # イベントの重複チェックをより厳密に行う
+        key = (event_data.get('alert_type'), event_data.get('camera'), 
+               event_data.get('user_identified'), 
+               ','.join(sorted(event_data.get('classes_detected', []))))  # クラスの検出状態も含める
+        last = self._recent_event_times.get(key)
+        DUPLICATE_WINDOW = 3.0  # Mostrar como máximo cada 3 segundos por evento
+        if last and (ahora - last) < DUPLICATE_WINDOW:
+            # 直近の通知をスキップ
+            print(f"重複イベントをスキップ: {key}")
+            return
+        # 通知時刻を記録
+        self._recent_event_times[key] = ahora
+
+    # Notify observers (debug prints removed to avoid console encoding issues)
         for observer in list(self._observers):
             try:
                 observer.update(self, event_data)
@@ -61,74 +117,152 @@ class SafetyMonitorSubject(Subject):
         """
         Lógica de negocio: Detecta y notifica si falta EPP o intrusión.
         - `classes_detected` espera items con posición: e.g. 'helmet_1', 'vest_1', 'qr_head_1', 'qr_body_2'
-        - `user_identified` es un dict opcional que mapea ubicacion->qr_value: {'head': 'QR123', 'body': 'QR456'}
+        - `user_identified` es un dict opcional que mapea ubicacion->qr_value: {'qr_1': 'User1', 'qr_2': 'User2', 'any': 'GlobalUser'}
         """
-        # Agrupar detecciones por persona (por índice numérico en los nombres)
-        people = self._group_detections(classes_detected, user_identified or {})
+        # Update last known QR for this camera if we have a valid QR
+        current_time = time.time()
+        if isinstance(user_identified, dict) and user_identified:
+            qr_value = user_identified.get('any')
+            if qr_value:
+                self._last_known_qr[camera_name] = (qr_value, current_time)
+        # Normalize user_identified: support dict mapping OR a simple string
+        qr_data = {}
+        if isinstance(user_identified, dict):
+            # Ensure we have both specific mappings and 'any' fallback
+            qr_data = dict(user_identified)  # make a copy
+            if 'any' in qr_data and not any(k.startswith('qr_') for k in qr_data):
+                # If we have an 'any' value but no specific mappings, create them
+                for i in range(1, 10):  # reasonable limit
+                    if f'qr_{i}' not in qr_data:
+                        qr_data[f'qr_{i}'] = qr_data['any']
+        elif isinstance(user_identified, str) and user_identified.strip():
+            # treat the provided string as a user identifier (e.g., 'admin (admin)')
+            qr_data = {'any': user_identified}
+            # Also create specific mappings for any potential person
+            for i in range(1, 10):  # reasonable limit
+                qr_data[f'qr_{i}'] = user_identified
 
-        # Verificar intrusión global (si hay clases intrusión)
-        intrusion = any(c.startswith('intrusion') or c.startswith('not_') for c in classes_detected)
+        # Agrupar detecciones por persona (por índice numérico en los nombres)
+        people = self._group_detections(classes_detected, qr_data)
+
+        # If grouping produced no per-person records (detector returns global class names
+        # without suffixes), synthesize a single person from presence/absence of classes
+        if not people:
+            has_helmet = 'helmet' in classes_detected
+            has_vest = ('vest' in classes_detected) or ('reflective' in classes_detected)
+            user_id = None
+            # if qr_data has a string under 'any', use it
+            if isinstance(qr_data, dict):
+                if 'any' in qr_data:
+                    user_id = qr_data.get('any')
+                else:
+                    # fallback to first available mapping value
+                    first = next(iter(qr_data.values()), None)
+                    user_id = first
+            people = [{'helmet': has_helmet, 'vest': has_vest, 'user_id': user_id}]
 
         # Para cada persona generar alertas por falta de equipo
-        for person in people:
+        for i, person in enumerate(people, 1):
             has_helmet = person.get('helmet', False)
             has_vest = person.get('vest', False)
-            user_id = person.get('user_id') or 'unknown'
+            user_id = person.get('user_id') or None
+            pid = i  # person identifier for QR mapping
+            
+            # Try to get user from any available source
+            effective_user = user_id
+            if not effective_user and isinstance(qr_data, dict):
+                # First try specific mapping for this person
+                if f'qr_{pid}' in qr_data:
+                    effective_user = qr_data[f'qr_{pid}']
+                # Then try global QR
+                elif 'any' in qr_data:
+                    effective_user = qr_data['any']
+                # Finally check recent QR
+                elif camera_name in self._last_known_qr:
+                    last_qr, last_time = self._last_known_qr[camera_name]
+                    if current_time - last_time <= 5.0:  # 5秒以内のQR
+                        effective_user = last_qr
 
-            # Falta casco
+            # Helper to build and possibly buffer/flush event
+            def _handle_alert(alert_type: str, description: str):
+                severity = self.calculate_william_fine(prob=0.8, exp=3, cons=10)
+                
+                # Use a local copy to avoid binding issues when assigning inside
+                # this nested function. We prefer a local e_user and keep
+                # the outer effective_user unchanged.
+                e_user = effective_user
+
+                # QRコードが検出されている場合は即座にチェック（遅延なし）
+                if not e_user and any('qr' in c.lower() for c in classes_detected):
+                    # QRマッピングを即座にチェック
+                    if isinstance(qr_data, dict):
+                        if 'any' in qr_data:
+                            e_user = qr_data['any']
+                        elif qr_data:
+                            e_user = next(iter(qr_data.values()))
+                
+                event = {
+                    'alert_type': alert_type,
+                    'camera': camera_name,
+                    'severity': severity,
+                    'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                    'user_identified': e_user or 'unknown',
+                    'description': description.replace('unknown', e_user) if e_user else description,
+                    'evidence_path': evidence_path,
+                    'classes_detected': classes_detected,
+                }
+
+                # key includes camera and alert_type and a simple fingerprint of classes to reduce collisions
+                fingerprint = tuple(sorted([str(x) for x in classes_detected]))
+                key: Tuple = (camera_name, alert_type, fingerprint)
+
+                if user_id:
+                    # If someone is identified now, flush any pending similar event replacing unknown
+                    with self._pending_lock:
+                        pending = self._pending_events.pop(key, None)
+                    if pending:
+                        # update pending with identified user and notify
+                        pending['user_identified'] = user_id
+                        pending['description'] = description
+                        self.notify(pending)
+                        return
+                    # Otherwise notify immediately for identified user
+                    self.notify(event)
+                else:
+                    # Buffer the event for a short time to allow QR to appear
+                    self._add_pending_event(key, event)
+
+            # Check for each type of violation
+            violations = []
             if not has_helmet:
-                severity = self.calculate_william_fine(prob=0.8, exp=3, cons=10)
-                event_data = {
-                    'alert_type': 'Falta Casco',
-                    'camera': camera_name,
-                    'severity': severity,
-                    'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-                    'user_identified': user_id,
-                    'description': f"Falta casco de protección - Usuario: {user_id}",
-                    'evidence_path': evidence_path,
-                    'classes_detected': classes_detected,
-                }
-                self.notify(event_data)
-
-            # Falta chaleco
+                violations.append('Falta Casco')
             if not has_vest:
-                severity = self.calculate_william_fine(prob=0.8, exp=3, cons=10)
-                event_data = {
-                    'alert_type': 'Falta Chaleco',
-                    'camera': camera_name,
-                    'severity': severity,
-                    'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-                    'user_identified': user_id,
-                    'description': f"Falta chaleco reflectivo - Usuario: {user_id}",
-                    'evidence_path': evidence_path,
-                    'classes_detected': classes_detected,
-                }
-                self.notify(event_data)
+                violations.append('Falta Chaleco')
+            
+            # 各人物の違反に対して1回だけアラートを生成
+            alert_sent = False  # 追跡フラグ
+            for violation in violations:
+                if alert_sent:
+                    continue  # 既にアラートを送信済みの場合はスキップ
+                if effective_user:
+                    description = f"{violation} - Usuario identificado: {effective_user}"
+                else:
+                    description = f"{violation} - Usuario: unknown"
+                _handle_alert(violation, description)
+                alert_sent = True  # アラート送信済みをマーク
 
-        # Si detectamos intrusión, notificar una alerta genérica de intrusión
-        if intrusion:
-            severity = self.calculate_william_fine(prob=0.6, exp=2, cons=7)
-            event_data = {
-                'alert_type': 'Intrusión',
-                'camera': camera_name,
-                'severity': severity,
-                'timestamp': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
-                'user_identified': 'unknown',
-                'description': 'Intrusión detectada',
-                'evidence_path': evidence_path,
-                'classes_detected': classes_detected,
-            }
-            self.notify(event_data)
+        # No more intrusion detection - we only care about PPE violations
+        pass
 
-    def _group_detections(self, classes_detected: List[str], qr_data: Dict[str, str]) -> List[Dict[str, Any]]:
+    def _group_detections(self, classes_detected: List[str], qr_data=None) -> List[Dict[str, Any]]:
         """
         Agrupa las detecciones por persona usando el sufijo numérico en las etiquetas.
         Retorna una lista de dicts: {'helmet': bool, 'vest': bool, 'user_id': str}
 
         Ejemplo de `classes_detected` esperado:
-          ['helmet_1', 'qr_head_1', 'vest_1', 'qr_body_2']
+          ['helmet_1', 'qr_1', 'vest_1', 'qr_2']
         Ejemplo de `qr_data`:
-          {'head': 'QR123', 'body': 'QR456'}
+          {'qr_1': 'User1', 'qr_2': 'User2', 'any': 'GlobalUser'}
         """
         people: Dict[int, Dict[str, Any]] = {}
 
@@ -143,22 +277,31 @@ class SafetyMonitorSubject(Subject):
             if pid not in people:
                 people[pid] = {'helmet': False, 'vest': False, 'user_id': None}
 
-            # base puede incluir ubicacion, ej 'qr_head' o 'qr_body'
+            # base puede incluir ubicacion, ej 'qr_head' o 'qr_body' o simplemente 'qr'
             if base == 'helmet':
                 people[pid]['helmet'] = True
             elif base in ('vest', 'reflective'):
                 people[pid]['vest'] = True
             elif base.startswith('qr'):
-                # determinar si el tag contiene la palabra head/body
-                if 'head' in base and 'head' in qr_data:
-                    people[pid]['user_id'] = qr_data.get('head')
-                elif 'body' in base and 'body' in qr_data:
-                    people[pid]['user_id'] = qr_data.get('body')
+                # Preferencia: si qr_data contiene una clave específica para este qr (p.e. 'qr_1'), usarla
+                key = f"qr_{pid}"
+                if isinstance(qr_data, dict) and key in qr_data:
+                    people[pid]['user_id'] = qr_data.get(key)
                 else:
-                    # si no hay posición en el nombre, intentar asignar el primer valor disponible
-                    if qr_data:
-                        first = next(iter(qr_data.values()))
-                        people[pid]['user_id'] = first
+                    # determinar si el tag contiene la palabra head/body y qr_data tiene esos keys
+                    if 'head' in base and isinstance(qr_data, dict) and 'head' in qr_data:
+                        people[pid]['user_id'] = qr_data.get('head')
+                    elif 'body' in base and isinstance(qr_data, dict) and 'body' in qr_data:
+                        people[pid]['user_id'] = qr_data.get('body')
+                    else:
+                        # si no hay posición en el nombre, intentar asignar el primer valor disponible
+                        if isinstance(qr_data, dict) and qr_data:
+                            # preferir key='any' o la primera disponible
+                            if 'any' in qr_data:
+                                people[pid]['user_id'] = qr_data.get('any')
+                            else:
+                                first = next(iter(qr_data.values()), None)
+                                people[pid]['user_id'] = first
 
         # Devolver lista ordenada por pid para determinismo
         return [people[k] for k in sorted(people.keys())]
@@ -166,6 +309,35 @@ class SafetyMonitorSubject(Subject):
     def calculate_william_fine(self, prob: float, exp: int, cons: int) -> int:
         """Método William Fine para priorizar (Prob x Exp x Cons)."""
         return int(prob * exp * cons)
+
+    def _add_pending_event(self, key: tuple, event: dict) -> None:
+        """Agrega un evento a la cola de pendientes y lanza un timer para su envío si no llega identificación."""
+        ahora = time.time()
+        with self._pending_lock:
+            # if there is already a pending event, update timestamp to the latest
+            existing = self._pending_events.get(key)
+            if existing:
+                # extend its timestamp (keep earliest timestamp but replace evidence if newer)
+                existing['last_seen'] = ahora
+                # we don't overwrite user_identified
+                return
+
+            event_copy = dict(event)
+            event_copy['last_seen'] = ahora
+            self._pending_events[key] = event_copy
+
+        # spawn a background thread to flush after PENDING_WINDOW if still pending
+        def _flush_later(k: tuple, waited: float):
+            time.sleep(waited)
+            with self._pending_lock:
+                ev = self._pending_events.pop(k, None)
+            if ev:
+                # final notification (user_identified likely 'unknown')
+                # map alert_type names to user-friendly labels
+                self.notify(ev)
+
+        t = threading.Thread(target=_flush_later, args=(key, self.PENDING_WINDOW), daemon=True)
+        t.start()
 
 
 class Observer(ABC):
@@ -179,37 +351,56 @@ class AlertLogger(Observer):
 
     def __init__(self, log_widget=None):
         self.log_widget = log_widget
+        self._last_message = {}
 
     def update(self, subject: Subject, event_data: dict) -> None:
-        # No mostrar Severidad en el mensaje, pero usarla para color
-        color = 'yellow' if event_data.get('severity', 0) < 15 else 'red'
-
-        # Construir información de usuario según detecciones
-        user_info = ''
-        classes_detected = event_data.get('classes_detected', [])
+        timestamp = event_data.get('timestamp')
+        camera = event_data.get('camera')
+        alert_type = event_data.get('alert_type', '')
         user_ident = event_data.get('user_identified')
 
-        if user_ident and user_ident != 'unknown':
-            # determinar si el QR corresponde a cabeza o cuerpo según classes_detected
-            # si hay múltiples QR por persona, asumimos que el evento trae user_identified ya diferenciado
-            if any('qr' in c for c in classes_detected) and not any(x in classes_detected for x in ('reflective', 'vest')):
-                user_info = f" - Solo QR: {user_ident}"
-            elif any(x in classes_detected for x in ('reflective', 'vest')) and not any('qr' in c for c in classes_detected):
-                user_info = f" - Solo chaleco: {user_ident}"
-            else:
-                user_info = f" - Usuario: {user_ident}"
-        else:
-            user_info = ' - Usuario: unknown'
+        # メッセージの重複チェック用のキー
+        msg_key = f"{camera}:{alert_type}:{user_ident}"
+        current_time = time.time()
 
-        msg = f"[{event_data.get('timestamp')}] {event_data.get('camera')}: {event_data.get('alert_type')}{user_info}"
+        # 2秒以内の同一メッセージはスキップ
+        if msg_key in self._last_message:
+            if current_time - self._last_message[msg_key] < 2.0:
+                return
 
-        if self.log_widget:
+        # アラートメッセージの生成
+        msg = None
+        color = None
+        if alert_type:
+            msg = f"[{timestamp}] {camera}: {alert_type} - Usuario: {user_ident if user_ident != 'unknown' else 'unknown'}"
+            color = 'yellow' if event_data.get('severity', 0) < 15 else 'red'
+        elif user_ident and user_ident != 'unknown':
+            msg = f"[{timestamp}] {camera}: Usuario identificado - {user_ident}"
+            color = 'cyan'
+
+        # メッセージの表示
+        if msg and self.log_widget:
+            color_tag = f"<span style='color: {color};'>"
+            if color == 'cyan':
+                color_tag += '[INFO] '
+            self.log_widget.append(f"{color_tag}{msg}</span>")
+        
+        # 最終表示時刻を更新
+        self._last_message[msg_key] = current_time
+
+        # アラーム音の再生（違反アラートのみ）
+        if alert_type.startswith('Falta'):
+            def _play_beep():
+                try:
+                    import winsound
+                    winsound.MessageBeep(winsound.MB_ICONEXCLAMATION)
+                except Exception:
+                    print('\a', end='')
             try:
-                self.log_widget.append(f"<span style='color: {color};'>🚨 {msg}</span>")
+                t = threading.Thread(target=_play_beep, daemon=True)
+                t.start()
             except Exception:
-                print(f"ALERTA(widget): {msg}")
-        else:
-            print(f"ALERTA: {msg}")
+                pass
 
 
 class IncidentRegistrar(Observer):
